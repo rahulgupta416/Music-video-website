@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>Music player</title>
+
+</head>
+<body>
+    <h3 class="heading">Music video  Player</h3>
+    <div class="container">
+        <div class="main-video">
+            <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sLykke8q2ls" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            <h4 class="title"> 01. Dooriya </h4>
+            </div>
+        </div>
+        <div class="video-list">
+            <div class="vid active">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sLykke8q2ls" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h4 class="title"> 01. Dooriya </h4>
+            </div>
+        
+        <div class="vid"> 
+           
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_kUrW9SEaJc" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+            <h4 class="title">02. Sage </h4>
+        </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0KNk-Joi-NM" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h4 class="title">03. Tera Ghata  </h4>
+        </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hgi2MYAFgE8" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h4 class="title">04. Gulabi aankhen </h4>
+        </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QCXaa1mEUK0" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+         <h4 class="title">05. Hawa Banke </h4>
+      </div>
+            <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tFNWHLEIiJ0" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+                <h4 class="title">06. Hayee oye </h4>
+            </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HoCwa6gnmM0" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h4 class="title">07. Nashe se chadh gayi</h4>
+        </div>
+        <div class="vid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GtQstf_sGr4" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+            <h4 class="title">08. Mere samne wali khidki main </h4>
+        </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-OD4ai7kIY4" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h4 class="title">09. Mere sapno ki rani </h4>
+        </div>
+        <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tJGBVigwPlU" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h4 class="title">10. Moto </h4>
+        </div>
+
+        </div>
+        <div class="footer">
+        <footer >
+                 This video player is created by rahul 
+        </footer>
+        </div>
+    </div>
+   <script>
+       let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+        listvideo.forEach(video => {
+            video.onclick = () => {
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if (video.classList.contains('active')) {
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+   </script>
+</body>
+</html>
